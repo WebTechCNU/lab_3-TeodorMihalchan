@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Інтернет-магазин «PC-GAMER»</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/styles.css">
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/cards_data.js" defer></script>
+    <script src="js/cart.js" defer></script>
+    <script src="js/cards.js" defer></script>
+    <script src="js/graphics.js" defer></script>
+    <script src="js/back_to_top.js" defer></script>
+    <!-- <script src="js/ad.js" async></script> -->
+    <script src="js/sub.js" async></script>
+  </head>
+  <body>
+    <div id="loader"></div>
+    <header>
+      <nav>
+        <ul class="horizontal-list">
+          <li class="nav_check"><a href="index.html"><img src="images/logo.png" alt="Головна" title="Головна" height="35px" min-height="25px"></a></li>
+          <li class="nav_check"><a href="news.html" alt="Новини" title="Новини">Новини</a></li>
+          <li class="nav_check"><a href="#" alt="Каталог" title="Каталог">Каталог</a></li>
+          <li><input type="text" alt="Пошук" title="Що хочете знайти?" placeholder="Я шукаю..." id="filter-input"><button class="nav_search" id="filter-button">Знайти</button></li>
+          <li class="nav_check"><a href="#"><img src="images/log_in.svg" alt="Увійти" title="Увійти" height="35px" min-height="25px"></a></li>
+          <li class="nav_check">
+            <a href="#" id="cart-button">
+              <img src="images/cart.svg" alt="Кошик" title="Кошик" height="35px" min-height="25px">
+              <span id="count-cart"></span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <article id="card-grid"></article>
+      <div class="outer_button">
+        <button id="load-more-button" class="button_add">Показати ще..</button>
+      </div>
+      <div class="menu-column">
+        <button id="show-chart">Show Diagram</button>
+        <button id="show-chart1">Show Histohram</button>
+        <button id="show-chart2">Show Line Chart</button>
+      </div>
+      <aside id="cart" class="cart">
+        <h2>Кошик</h2>
+        <div id="cart-list" class="cart-list"></div>
+        <div class="cart-options">
+          <button id="close-cart" class="exit-cart">✖</button>
+          <div class="menu-column">
+            <button id="cart-sort" class="btn-primary">Сортувати за назвою</button>
+            <button id="cart-sort-price" class="btn-primary">Сортувати по ціні</button>
+          </div>
+          <div class="cont-total">
+            <div id="cart-total">0.00 ₴</div>
+            <button id="checkout-button" class="btn-primary">Оформити замовлення</button>
+          </div>
+        </div>
+      </aside>
+      <button id="back-to-top-btn" onclick="scrollToTop()">▲</button>
+
+      <div id="chart-modal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <canvas id="myChart"></canvas>
+        </div>
+      </div>
+
+    </main>
+    <footer>
+      © Created by Teodor Migalcean
+    </footer>
+    <div id="sub"></div>
+  </body>
+</html>
